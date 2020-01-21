@@ -5,6 +5,7 @@ def selection_sort(arr)
     min = i
 
     # find the min
+    # i + 1 becuase i is already sorted
     for j in (i + 1)..len
       min = j if arr[j] < arr[min]
     end
