@@ -6,6 +6,8 @@ def insertion_sort(arr)
     hole = i
 
     # shift values to the right
+    # starting from hole going backwards
+    # until previous is greater or hole is 0
     while hole > 0 && arr[hole - 1] > value
       arr[hole] = arr[hole - 1]
       hole -= 1
