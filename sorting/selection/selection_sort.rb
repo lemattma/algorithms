@@ -10,7 +10,8 @@ def selection_sort(arr)
       min = j if arr[j] < arr[min]
     end
 
-    # swap
+    next unless min != i
+
     temp = arr[min]
     arr[min] = arr[i]
     arr[i] = temp
