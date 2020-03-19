@@ -21,7 +21,12 @@ class MinHeap
 
   def heapify_down(index)
     while left_child(index)
-      min_child = right_child(index) && right_child(index) < left_child(index) ? right_child_idx(index) : left_child_idx(index)
+      min_child =
+        if right_child(index) && right_child(index) < left_child(index)
+          right_child_idx(index)
+        else
+          left_child_idx(index)
+        end
 
       break if @arr[index] <= @arr[min_child]
 
